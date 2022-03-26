@@ -3,9 +3,9 @@
 import hashlib
 
 user_password: str = input('Введите пароль\n')
-user_password_hash: hash = hashlib.sha256(user_password.encode())
+user_password_hash: hash = hash(hashlib.md5(user_password.encode()))
 user_password_repeat: str = input('Введите пароль еще раз\n')
-user_password_repeat_hash: hash = hashlib.sha256(user_password_repeat_hash.encode())
+user_password_repeat_hash: hash = hash(hashlib.md5(user_password_repeat.encode()))
 
 
 while user_password_hash == user_password_repeat_hash:
